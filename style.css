@@ -1,0 +1,79 @@
+:root {
+  --preto: #09090e;
+  --grafite: #29292e;
+  --roxo: #a020f0;
+  --verde: #59ed19;
+  --branco: #f5f5f7;
+  --prata: #bfc0ca;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--branco);
+  background: radial-gradient(ellipse at 20% 0%, rgba(130, 30, 190, .15), transparent 45%),
+              radial-gradient(ellipse at 90% 80%, rgba(60, 190, 40, .08), transparent 40%),
+              linear-gradient(135deg, #35353b 0%, #1c1c22 43%, #09090e 100%);
+}
+.site-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.cabecalho { padding: 48px 20px 20px; text-align: center; }
+.marca { display: flex; flex-direction: column; align-items: center; line-height: 1; }
+.marca-zdi {
+  font-size: clamp(4rem, 13vw, 7rem); font-weight: 900; letter-spacing: .05em;
+  background: linear-gradient(115deg, #7d18ce, #d281ff 38%, #59ed19 70%, #238c20);
+  background-clip: text; -webkit-background-clip: text; color: transparent;
+  filter: drop-shadow(0 0 13px rgba(160, 32, 240, .3));
+}
+.marca-zdi span { color: var(--verde); -webkit-text-fill-color: var(--verde); }
+.marca-subtitulo { font-size: clamp(1.2rem, 4vw, 2rem); font-weight: 800; letter-spacing: .22em; }
+.slogan { color: var(--prata); letter-spacing: .18em; font-size: .72rem; margin-top: 18px; }
+.ponto-roxo { color: var(--roxo); } .ponto-verde { color: var(--verde); }
+.descricao { color: #b8b8c2; margin-top: 16px; }
+.principal { flex: 1; padding: 40px 20px 75px; text-align: center; }
+.principal h1 { font-size: clamp(1.5rem, 4vw, 2.1rem); margin: 0 0 10px; }
+.intro { color: var(--prata); margin: 0; }
+.menu-caixas { display: flex; justify-content: center; align-items: stretch; flex-wrap: wrap; gap: 28px; max-width: 850px; margin: 48px auto 0; }
+.box {
+  --destaque: var(--verde);
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; flex: 1 1 280px; max-width: 370px; min-height: 250px;
+  padding: 32px 28px; border: 2px solid var(--destaque); border-radius: 18px;
+  background: linear-gradient(150deg, #23232b, #111116); color: var(--branco);
+  text-decoration: none; transition: transform .3s ease, box-shadow .3s ease,
+  border-color .3s ease, background .3s ease, color .3s ease;
+}
+.box-sobre { --destaque: var(--verde); }
+.box-atendimento { --destaque: var(--roxo); }
+.box .icone { font-size: 2.5rem; color: var(--destaque); margin-bottom: 14px; }
+.box h2 { margin: 0 0 12px; font-size: 1.4rem; }
+.box p { margin: 0; line-height: 1.55; color: #c9c9d2; }
+.box .seta { position: absolute; right: 20px; top: 15px; font-size: 1.4rem; color: var(--destaque); }
+.box:focus-visible { outline: 3px solid var(--destaque); outline-offset: 5px; }
+@media (hover: hover) and (pointer: fine) {
+  .box:hover { border-color: var(--destaque); box-shadow: 0 0 12px var(--destaque), 0 0 32px color-mix(in srgb, var(--destaque) 40%, transparent); transform: translateY(-8px); }
+}
+@media (hover: none), (pointer: coarse) {
+  .box { border-color: var(--destaque); }
+  .box:active, .box.ativado { background: var(--destaque); color: #fff; }
+  .box:active p, .box.ativado p, .box:active .icone, .box.ativado .icone,
+  .box:active .seta, .box.ativado .seta { color: #fff; }
+}
+.rodape { text-align: center; padding: 24px 20px 30px; border-top: 1px solid #353540; background: rgba(0, 0, 0, .2); color: var(--prata); font-size: .9rem; }
+.rodape p { margin: 8px 0; }
+.rodape strong { color: var(--branco); }
+.rodape-marca { letter-spacing: .12em; text-transform: uppercase; font-size: .75rem; margin-top: 22px !important; }
+.rodape-marca span { color: var(--verde); }
+@media (max-width: 600px) {
+  .cabecalho { padding-top: 36px; }
+  .principal { padding-top: 32px; padding-bottom: 50px; }
+  .menu-caixas { margin-top: 32px; gap: 20px; }
+  .box { flex-basis: 100%; min-height: 205px; }
+  .separador { display: block; font-size: 0; height: 5px; }
+  .slogan { letter-spacing: .08em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
