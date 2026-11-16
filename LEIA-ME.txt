@@ -1,0 +1,9 @@
+ZDI INFORMÁTICA — LANDING PAGE ÚNICA
+
+1. Extraia todos os arquivos na mesma pasta.
+2. Abra index.html no navegador (ou via Live Server no VS Code).
+3. Não precisa instalar Node.js, npm ou bibliotecas.
+4. A página possui seções Sobre, Unidades e Avaliações, acessíveis pelo menu.
+5. Google Maps e WhatsApp precisam de internet.
+6. Antes da publicação, confirme os marcadores dos mapas e confira os cinco trechos de avaliações no Perfil da Empresa no Google. Autores e notas não foram verificados.
+7. A imagem logo-zdi.jpg é um recorte da arte de referência enviada, não um arquivo vetorial original da marca.
